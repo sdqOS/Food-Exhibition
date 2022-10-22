@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>北京烤鸭</title>
+
+<link rel="stylesheet" type="text/css" href="css/旋转.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/men.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div class="container">
+		<ul id="nav">
+			<li><a href="美食首页.html#sdq2">返回</a></li>
+			<li><a href="美食首页.html#sdq1" target="">外国美食</a></li>
+			<li><a href="美食首页.html#sdq2" target="">中国美食</a></li>
+			<li><a href="美食首页.html#sdq3" target="">特色小吃</a></li>
+			<li><a href="美食首页.html#sdq4" target="">配套饮料</a></li>
+			<li><a><input id="text" type="text" value=""></a></li>
+			<li><a href="#" onclick="Value()">搜索</a></li>
+			
+
+		</ul>
+		
+<script>
+	function Value(){
+		var v = "https://www.sogou.com/web?query=" + document.getElementById("text").value;
+		window.open(v)
+	}
+</script>
+<div id="banner">
+	<div id="carousel2">
+		<img src="北京烤鸭/1.jpg" data-url="#">
+		<img src="北京烤鸭/2.jpg" data-url="#">
+		<img src="北京烤鸭/3.jpg" data-url="#">
+		<img src="北京烤鸭/4.jpg" data-url="#">
+		<img src="北京烤鸭/5.jpg" data-url="#">
+	</div>
+</div>
+
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function() {
+		$('#carousel2').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';" >
+	
+	<dd class="f"><a href="美食网站.html#sdq2"><em>北京烤鸭</em> 是具有世界声誉的北京著名菜式，起源于中国南北朝时期，
+	《食珍录》中已记有炙鸭，在当时是宫廷食品。用料为优质肉食鸭北京鸭，果木炭火烤制，
+	色泽红润，肉质肥而不腻，外脆里嫩。它以色泽红艳，肉质细嫩，味道醇厚，肥而不腻的特色。</dd></a>
+	
+
+
+
+</div>
+<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E7%83%A4%E9%B8%AD/664769?fr=aladdin" target="_blank">北京烤鸭真香</a>
+</body>
+</html>

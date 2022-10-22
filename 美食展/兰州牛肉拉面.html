@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>兰州牛肉拉面</title>
+
+<link rel="stylesheet" type="text/css" href="css/旋转.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/men.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div class="container">
+		<ul id="nav">
+			<li><a href="美食首页.html#sdq2 ">返回</a></li>
+			<li><a href="美食首页.html#sdq1" target="">外国美食</a></li>
+			<li><a href="美食首页.html#sdq2" target="">中国美食</a></li>
+			<li><a href="美食首页.html#sdq3" target="">特色小吃</a></li>
+			<li><a href="美食首页.html#sdq4" target="">配套饮料</a></li>
+			<li><a><input id="text" type="text" value=""></a></li>
+			<li><a href="#" onclick="Value()">搜索</a></li>
+			
+
+		</ul>
+		
+<script>
+	function Value(){
+		var v = "https://www.sogou.com/web?query=" + document.getElementById("text").value;
+		window.open(v)
+	}
+</script>
+
+<div id="banner">
+	<div id="carousel2">
+		<img src="兰州牛肉拉面/1.jpg" data-url="#">
+		<img src="兰州牛肉拉面/2.jpg" data-url="#">
+		<img src="兰州牛肉拉面/3.jpg" data-url="#">
+		<img src="兰州牛肉拉面/4.jpg" data-url="#">
+		<img src="兰州牛肉拉面/5.jpg" data-url="#">
+	</div>
+</div>
+
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function() {
+		$('#carousel2').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+	<dd class="f"><a href="美食网站.html#sdq2"><em>兰州清汤牛肉拉面</em> 是甘肃省兰州市的一种风味小吃，
+		属于西北菜，该菜品也是“中国十大面条”之一，兰州牛肉拉面以“汤镜者清，
+		肉烂者香，面细者精”的独特风味，和“一清二白三红四绿五黄”，一清(汤清)、二白(萝卜白)、三红(辣椒油红)
+		、四绿(香菜、蒜苗绿)、五黄(面条黄亮)，赢得了国内乃至全世界顾客的好评。</a></dd>
+	</div>
+	<a href="https://baike.baidu.com/item/%E5%85%B0%E5%B7%9E%E7%89%9B%E8%82%89%E9%9D%A2/346879" target="_blank">兰州牛肉拉面</a>
+
+
+
+</body>
+</html>

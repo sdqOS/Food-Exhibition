@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>咖啡</title>
+
+<link rel="stylesheet" type="text/css" href="css/旋转.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/men.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div class="container">
+		<ul id="nav">
+			<li><a href="美食首页.html#sdq4 ">返回</a></li>
+			<li><a href="美食首页.html#sdq1" target="">外国美食</a></li>
+			<li><a href="美食首页.html#sdq2" target="">中国美食</a></li>
+			<li><a href="美食首页.html#sdq3" target="">特色小吃</a></li>
+			<li><a href="美食首页.html#sdq4" target="">配套饮料</a></li>
+			<li><a><input id="text" type="text" value=""></a></li>
+			<li><a href="#" onclick="Value()">搜索</a></li>
+		</ul>
+		
+		<script>
+			function Value(){
+				var v = "https://www.sogou.com/web?query=" + document.getElementById("text").value;
+				window.open(v)
+			}
+		</script>
+<div id="banner">
+	<div id="carousel4">
+		<img src="咖啡/1.jpg" data-url="#">
+		<img src="咖啡/2.jpg" data-url="#">
+		<img src="咖啡/3.jpg" data-url="#">
+		<img src="咖啡/4.jpg" data-url="#">
+		<img src="咖啡/5.jpg" data-url="#">
+	</div>
+</div>
+
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function() {
+		$('#carousel4').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+	<dd class="f"><a href="美食网站.html#sdq4"><em>咖啡</em> 是用经过烘焙磨粉的咖啡豆制作出来的饮料。作为世界三大饮料之一，其与可可、茶同为流行于世界的主要饮品。
+		咖啡树是属茜草科多年生常绿灌木或小乔木，日常饮用的咖啡是用咖啡豆配合各种不同的烹煮器具制作出来的，
+		而咖啡豆就是指咖啡树果实里面的果仁，再用适当的方法烘焙而成，一杯标准的咖啡品尝起来的味道不应该是苦涩的，
+		一名合格的咖啡师在制作咖啡时会严谨地进行每一步操作，最后为客人呈上的咖啡在味觉上会呈现出不同程度的甜度、酸度、香醇度或是干净度。</a>
+		</dd>
+	</div>
+		<a href="https://baike.baidu.com/item/%E5%92%96%E5%95%A1/29518" target="_blank">咖啡休闲</a>
+        <a href="咖啡时间2.html"><br>点击进入咖啡时间</a>
+	    
+</body>
+</html>

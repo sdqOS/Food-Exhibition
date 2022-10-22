@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>臭豆腐</title>
+
+<link rel="stylesheet" type="text/css" href="css/旋转.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/men.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div class="container">
+		<ul id="nav">
+			<li><a href="美食首页.html#sdq3">返回</a></li>
+			<li><a href="美食首页.html#sdq1" target="">外国美食</a></li>
+			<li><a href="美食首页.html#sdq2" target="">中国美食</a></li>
+			<li><a href="美食首页.html#sdq3" target="">特色小吃</a></li>
+			<li><a href="美食首页.html#sdq4" target="">配套饮料</a></li>
+			<li><a><input id="text" type="text" value=""></a></li>
+			<li><a href="#" onclick="Value()">搜索</a></li>
+			
+
+		</ul>
+		
+<script>
+	function Value(){
+		var v = "https://www.sogou.com/web?query=" + document.getElementById("text").value;
+		window.open(v)
+	}
+</script>
+
+<div id="banner">
+	<div id="carousel3">
+		<img src="臭豆腐/1.jpg" data-url="#">
+		<img src="臭豆腐/2.jpg" data-url="#">
+		<img src="臭豆腐/3.jpg" data-url="#">
+		<img src="臭豆腐/4.jpg" data-url="#">
+		<img src="臭豆腐/5.jpg" data-url="#">
+	</div>
+</div>
+
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function() {
+		$('#carousel3').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+	<dd class="f"><a href="美食网站.html#sdq3"><em>臭豆腐</em> 是中国传统特色小吃之一，在各地的制作方式、食用方法均有相当大的差异，有北方和南方的不同类型，臭豆腐在南方又称臭干子。其名虽俗气、却外陋内秀、平中见奇、源远流长，是一种极具特色的中华传统小吃，古老而传统，令人欲罢不能。制作材料有大豆、豆豉、纯碱等。
+		在中国以及世界各地的制作方式和食用方式均存在地区上的差异，其味道也差异甚大，但具有“闻起来臭、吃起来香”的特点。长沙和南京的臭豆腐相当闻名，台湾、浙江、上海、北京、武汉、玉林等地的臭豆腐也颇有名气。
+		天津街头多为南京臭豆腐，为灰白豆腐块油炸成金黄色，臭味很淡。南方街头的臭豆腐多以“长沙臭豆腐”为招牌，同样是油炸，但是内部中空且为黑色，臭味更为突出。</a></a></dd>
+</div>
+		<a href="https://baike.baidu.com/item/%E8%87%AD%E8%B1%86%E8%85%90/24468" target="_blank">臭豆腐香</a>
+
+
+</body>
+</html>

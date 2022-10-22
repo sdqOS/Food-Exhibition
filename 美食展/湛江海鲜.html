@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>湛江海鲜料理</title>
+
+<link rel="stylesheet" type="text/css" href="css/旋转.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/men.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div class="container">
+		<ul id="nav">
+			<li><a href="美食首页.html#sdq4 ">返回</a></li>
+			<li><a href="美食首页.html#sdq1" target="">外国美食</a></li>
+			<li><a href="美食首页.html#sdq2" target="">中国美食</a></li>
+			<li><a href="美食首页.html#sdq3" target="">特色小吃</a></li>
+			<li><a href="美食首页.html#sdq4" target="">配套饮料</a></li>
+			<li><a><input id="text" type="text" value=""></a></li>
+			<li><a href="#" onclick="Value()">搜索</a></li>
+			
+
+		</ul>
+		
+<script>
+	function Value(){
+		var v = "https://www.sogou.com/web?query=" + document.getElementById("text").value;
+		window.open(v)
+	}
+</script>
+
+<div id="banner">
+	<div id="carousel2">
+		<img src="湛江海鲜/1.jpg" data-url="#">
+		<img src="湛江海鲜/2.jpg" data-url="#">
+		<img src="湛江海鲜/3.jpg" data-url="#">
+		<img src="湛江海鲜/4.jpg" data-url="#">
+        <img src="湛江海鲜/5.jpg" data-url="#">
+		<img src="湛江海鲜/6.jpg" data-url="#">
+		<img src="湛江海鲜/7.jpg" data-url="#">
+		<img src="湛江海鲜/8.jpg" data-url="#">
+		<img src="湛江海鲜/9.jpg" data-url="#">
+		<img src="湛江海鲜/10.jpg" data-url="#">
+	</div>
+</div>
+
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function() {
+		$('#carousel2').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+	<dd class="f"><a href="美食网站.html#sdq2"><em>湛江海鲜料理</em>  是指粤西 广东湛江市的海产品，该地的海鲜以新鲜、质优、价廉闻名遐迩。
+        湛江也是人们品尝海鲜、购买海产品的理想之地，有“要吃海鲜到湛江”之说。
+        品尝湛江海鲜以品尝海鱼为主。如，石斑、金仓等，烹饪海产品的方法很多，有水煮、清蒸、红烧、清炖、油炸等</a></dd>
+</div>
+<a href="https://baike.baidu.com/item/%E6%B9%9B%E6%B1%9F%E6%B5%B7%E9%B2%9C/6135065" target="_blank">湛江海鲜物超所值</a>
+
+
+</body>
+</html>

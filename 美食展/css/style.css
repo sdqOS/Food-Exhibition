@@ -1,0 +1,61 @@
+/* 搜索框 */
+.ip {
+	/*输入框高度设置为40px, border占据2px，总高度为42px*/
+	width: 380px;
+	height: 40px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	outline: none;
+	}
+	
+	/* .parent>input:first-of-type:focus {
+	border: 1px solid #317ef3;
+	padding-left: 10px;
+	} */
+
+	img {
+		height:350;
+		width: 350;
+	}
+	/* 搜索按键 */
+	.but  {
+	/*button按钮border并不占据外围大小，设置高度42px*/
+	width: 130px;
+	height: 44px;
+	position: absolute;
+	background: #317ef3;
+	border: 1px solid #217ef3;
+	color: #fff;
+	font-size: 16px; 
+	outline: none;
+	}
+	
+	*{list-style:none;outline:none;}
+	
+	body{font-family:"微软雅黑";text-align:center;}
+	    a{
+		text-indent: 1em;
+		display:inline-block;
+		font-size:22px;
+		color:#643407;
+		}
+	a:nth-child(1){text-indent:0;} 
+	a:link,a:visited{text-decoration:none;}
+	a:hover{
+		text-decoration:underline;
+		color:rgb(245, 17, 62);
+		}
+	    dl{display:none;}
+	dd{
+		line-height:38px;
+		font-size:22px;
+		font-family:"微软雅黑";
+		color:rgb(48, 45, 45);
+		}
+	dd:before{content:url(images/11.png);} 
+	em{
+		color:rgb(252, 29, 73);
+		font-weight:bold;
+		font-style: normal;
+		}
+	:target{display:block;}

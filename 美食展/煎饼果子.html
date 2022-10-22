@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>煎饼果子</title>
+
+<link rel="stylesheet" type="text/css" href="css/旋转.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/men.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div class="container">
+		<ul id="nav">
+			<li><a href="美食首页.html#sdq3 ">返回</a></li>
+			<li><a href="美食首页.html#sdq1" target="">外国美食</a></li>
+			<li><a href="美食首页.html#sdq2" target="">中国美食</a></li>
+			<li><a href="美食首页.html#sdq3" target="">特色小吃</a></li>
+			<li><a href="美食首页.html#sdq4" target="">配套饮料</a></li>
+			<li><a><input id="text" type="text" value=""></a></li>
+			<li><a href="#" onclick="Value()">搜索</a></li>
+			
+
+		</ul>
+		
+<script>
+	function Value(){
+		var v = "https://www.sogou.com/web?query=" + document.getElementById("text").value;
+		window.open(v)
+	}
+</script>
+<div id="banner">
+	<div id="carousel3">
+		<img src="煎饼果子/1.jpg" data-url="#">
+		<img src="煎饼果子/2.jpg" data-url="#">
+		<img src="煎饼果子/3.jpg" data-url="#">
+		<img src="煎饼果子/4.jpg" data-url="#">
+		<img src="煎饼果子/5.jpg" data-url="#">
+	</div>
+</div>
+
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function() {
+		$('#carousel3').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+	<dd class="f"><a href="美食网站.html#sdq3"><em>煎饼果子</em> 馃就是油炸食品，在煎饼(加鸡蛋)里裹上油条(天津，河北大部分地区，山东北部的庆云县乐陵市等地称之为馃子)，所以叫“煎饼馃子”。
+		煎饼馃子是天津人的小吃。它是由绿豆面薄饼、鸡蛋、还有油条或者薄脆的“馃篦儿”组成，配以面酱、葱末、腐乳、辣椒酱(可选)作为佐料，口感咸香，如今的煎饼馃子原料已经不仅限于绿豆面摊成的薄饼，还有黄豆面、黑豆面等等多种选择。但是，天津人依旧坚持着传统的吃法，正宗煎饼果子中选用的食材只有绿豆面、油条以及葱花及其他佐料。
+		煎饼馃子在早上的早点摊，马路边或者社区里才能见到，小摊主要就是制作和出售煎饼馃子的小推车，制作一套只需几分钟的时间。</a>
+	</a></dd>
+</div>
+<a href="https://baike.baidu.com/item/%E7%85%8E%E9%A5%BC%E9%A6%83%E5%AD%90/474937?fromtitle=%E7%85%8E%E9%A5%BC%E6%9E%9C%E5%AD%90&fromid=407808" target="_blank">煎饼果子真香</a>
+
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>美食首页</title>
+<link rel="stylesheet" type="text/css" href="css/旋转.css" />
+<link rel="stylesheet" type="text/css" href="css/美食.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery-ui.min.css" rel="stylesheet" >
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link href="css/jquery-ui.min.css" rel="stylesheet" >
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+
+<style>
+	.abc {
+	
+	text-align: left;
+	background-color:darkgray;			
+	width:100px;
+	height:50px;
+}
+</style>
+
+</head>
+
+
+
+<script type="text/javascript">
+// 大图标
+window.onload = function(){
+	function $(param){
+		if(arguments[1] == true){
+			return document.querySelectorAll(param);
+		}else{
+			return document.querySelector(param);
+		}
+	}
+	var $box = $(".box");
+	var $box1 = $(".box-1 ul li",true);
+	var $box2 = $(".box-2 ul");
+	var $box3 = $(".box-3");
+	var $length = $box1.length;
+	
+	var str = "";
+	for(var i =0;i<$length;i++){
+		if(i==0){
+			str +="<li class='on'>"+(i+1)+"</li>";
+		}else{
+			str += "<li>"+(i+1)+"</li>";
+		}
+	}
+	$box2.innerHTML = str;
+	
+	var current = 0;
+	
+	var timer;
+	timer = setInterval(go,1000);
+	function go(){
+		for(var j =0;j<$length;j++){
+			$box1[j].style.display = "none";
+			$box2.children[j].className = "";
+		}
+		if($length == current){
+			current = 0;
+		}
+		$box1[current].style.display = "block";
+		$box2.children[current].className = "on";
+		current++;
+	}
+	
+	for(var k=0;k<$length;k++){
+		$box1[k].onmouseover = function(){
+			clearInterval(timer);
+		}
+		$box1[k].onmouseout = function(){
+			timer = setInterval(go,1000);
+		}
+	}
+	for(var p=0;p<$box3.children.length;p++){
+		$box3.children[p].onmouseover = function(){
+			clearInterval(timer);
+		};
+		$box3.children[p].onmouseout = function(){
+			timer = setInterval(go,1000);
+		}
+	}
+	
+	for(var u =0;u<$length;u++){
+		$box2.children[u].index  = u;
+		$box2.children[u].onmouseover = function(){
+			clearInterval(timer);
+			for(var j=0;j<$length;j++){
+				$box1[j].style.display = "none";
+				$box2.children[j].className = "";
+			}
+			this.className = "on";
+			$box1[this.index].style.display = "block";
+			current = this.index +1;
+		}
+		$box2.children[u].onmouseout = function(){
+			timer = setInterval(go,1000);
+		}
+	}
+	
+	$box3.children[0].onclick = function(){
+		back();
+	}
+	$box3.children[1].onclick = function(){
+		go();
+	}
+	function back(){
+		for(var j =0;j<$length;j++){
+			$box1[j].style.display = "none";
+			$box2.children[j].className = "";
+		}
+		if(current == 0){
+			current = $length;
+		}
+		$box1[current-1].style.display = "block";
+		$box2.children[current-1].className = "on";
+		current--;
+	}
+}
+</script>
+<!-- <img src="image/舌尖上的中国2.jpg" class="abc"></img> -->
+<body>
+	<div class="container">
+		<ul id="nav">
+			<li><a href="美食网站.html">旧款首页</a></li>
+			<li><a href="#sdq1" target="">外国美食</a></li>
+			<li><a href="#sdq2" target="">中国美食</a></li>
+			<li><a href="#sdq3" target="">特色小吃</a></li>
+			<li><a href="#sdq4" target="">配套饮料</a></li>
+			<li><a><input id="text" type="text" value=""></a></li>
+			<li><a href="#" onclick="Value()">搜索</a></li>
+		</ul>
+<script>
+	function Value(){
+		var v = "https://www.sogou.com/web?query=" + document.getElementById("text").value;
+		window.open(v)
+	}
+</script>
+
+
+	</div>
+	<!-- <nav id="sortable" bgcolor=>	
+	<a title="首页"     href="美食网站.html" class="two" target="" one-link-mark="yes">旧款首页</a>
+	<a title="外国美食" href="#sdq1" target="" one-link-mark="yes"class="two">外国美食</a>
+	<a title="中国美食" href="#sdq2" target="" one-link-mark="yes"class="two">中国美食</a>
+	<a title="特色小吃" href="#sdq3" target="" one-link-mark="yes"class="two">特色小吃</a>
+	<a title="配套饮料" href="#sdq4" target="" one-link-mark="yes"class="two">配套饮料</a>
+	</nav> -->
+	<div class="box">
+	<div class="box-1">
+		<ul>
+			<li>
+				<img src="images/1.jpg" alt="这里是中国美食"></img>
+				<h2>这里是中国美食</h2>
+			</li>
+			<li>
+				<img src="images/2.jpg" alt="这里是配套饮料"></img>
+				<h2>这里是配套饮料</h2>
+			</li>
+			<li>
+				<img src="images/3.jpg" alt="这里是外国美食"></img>
+				<h2>这里是外国美食</h2>
+			</li>
+			<li>
+				<img src="images/4.jpg" alt="这里是特殊小吃"></img>
+				<h2>这里是特殊小吃</h2>
+			</li>
+		</ul>
+	</div>
+
+	<div class="box-2">
+		<ul>
+			
+		</ul>
+	</div>
+	<div class="box-3">
+		<span class="prev"> < </span><!-- 大界面的左更换 -->
+		<span class="next"> > </span><!-- 大界面的右更换 -->
+	</div>
+</div>
+<dl id="sdq1">
+<div id="banner">
+	<div id="carousel1">
+		<img src="披萨/1.jpg" data-url="披萨.html">
+		<img src="汉堡包/2.jpg" data-url="汉堡包.html">
+		<img src="薯条/3.jpg" data-url="薯条.html">
+		<img src="千层面/4.jpg" data-url="千层面.html">
+	</div>
+	</div>
+	</dl>
+
+<dl id="sdq2">
+	<div id="banner">
+		<div id="carousel2">
+			<img src="四川火锅/1.jpg" data-url="四川火锅.html">
+			<img src="兰州牛肉拉面/2.jpg" data-url="兰州牛肉拉面.html">
+			<img src="湛江海鲜/3.jpg" data-url="湛江海鲜.html">
+			<img src="北京烤鸭/4.jpg" data-url="北京烤鸭.html">
+		</div>
+		</div>
+		</dl>
+
+<dl id="sdq3">
+	<div id="banner">
+		<div id="carousel3">
+			<img src="麻辣烫/1.jpg" data-url="麻辣烫.html">
+			<img src="煎饼果子/2.jpg" data-url="煎饼果子.html">
+			<img src="臭豆腐/3.jpg" data-url="臭豆腐.html">
+			<img src="辣条/辣条/1.jpg" data-url=" 辣条.html">
+		</div>
+		</div>
+		</dl>
+	
+	<dl id="sdq4">
+		<div id="banner">
+			<div id="carousel4">
+				<img src="可乐/1.jpg" data-url="可乐.html">
+				<img src="果汁/2.jpg" data-url="果汁.html">
+				<img src="茶/3.jpg"  data-url="茶.html">
+				<img src="咖啡/2.jpg" data-url="咖啡.html">
+			</div>
+			</div>
+			</dl>
+			
+
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function() {
+		$('#carousel1').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+	$(function() {
+		$('#carousel2').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+	$(function() {
+		$('#carousel3').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+	$(function() {
+		$('#carousel4').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+	$("#sortable").sortable();
+</script>
+
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+
+</div>
+
+</body>
+</html>

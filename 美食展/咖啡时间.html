@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+<title>咖啡时间</title>
+<style>
+	#Time,#p{
+		font-size: 100px;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<center>
+<div class="panel">
+	<img src="咖啡/2.jpg" name="咖啡">
+</div>
+
+</center>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.image-jigsaw.min.js"></script>
+<script src="js/咖啡1.js"></script>
+
+<script>
+	$(".panel").jigsaw({freq: 666, x:3, y:3, margin:4});/* 间隔 */
+</script>
+
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<h2>看着这副拼图，是不是很放松</h2>
+<h1>以下是喝咖啡所剩时间</h1>
+<p id="Time">10</p>
+</div>
+</body>
+</html>

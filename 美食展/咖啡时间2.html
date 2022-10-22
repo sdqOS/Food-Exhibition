@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+<title>咖啡时间</title>
+<style>
+	#Time,#p{
+		font-size: 100px;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<center>
+<div class="panel">
+	<img src="咖啡/1.jpg" name="咖啡">
+</div>
+
+</center>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.image-jigsaw.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/咖啡.js"></script>
+
+<script>
+function Coffee(){
+	nowimg=(nowimg>=5)?1:(nowimg+1);
+	document.images["咖啡"].src="咖啡/"+nowimg+".jpg";
+	}
+	window.setInterval(Coffee,500)
+	$(".panel").jigsaw({freq: 666, x:3, y:3, margin:4});/* 间隔 */
+
+//咖啡
+
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<h2>看着这副拼图，是不是很放松</h2>
+<h1>以下是喝咖啡所剩时间</h1>
+<p id="Time">10</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>披萨</title>
+
+<link rel="stylesheet" type="text/css" href="css/旋转.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/men.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div class="container">
+		<ul id="nav">
+			<li><a href="美食首页.html#sdq1 ">返回</a></li>
+			<li><a href="美食首页.html#sdq1" target="">外国美食</a></li>
+			<li><a href="美食首页.html#sdq2" target="">中国美食</a></li>
+			<li><a href="美食首页.html#sdq3" target="">特色小吃</a></li>
+			<li><a href="美食首页.html#sdq4" target="">配套饮料</a></li>
+			<li><a><input id="text" type="text" value=""></a></li>
+			<li><a href="#" onclick="Value()">搜索</a></li>
+			
+
+		</ul>
+		
+<script>
+	function Value(){
+		var v = "https://www.sogou.com/web?query=" + document.getElementById("text").value;
+		window.open(v)
+	}
+</script>
+
+<div id="banner">
+	<div id="carousel1">
+		<img src="披萨/1.jpg" data-url="#">
+		<img src="披萨/2.jpg" data-url="#">
+		<img src="披萨/3.jpg" data-url="#">
+		<img src="披萨/4.jpg" data-url="#">
+        <img src="披萨/5.jpg" data-url="#">
+	</div>
+</div>
+
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(function() {
+		$('#carousel1').carousel({
+			curDisplay: 0, //默认索引
+			autoPlay: false, //是否自动播放
+			interval: 3000 //间隔时间
+		});
+	});
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+	<dd class="f">
+		<a href="美食网站.html#sdq1"><em>披萨(Pizza)</em> 又称为比萨饼、匹萨、批萨、披萨，是一种发源于意大利的食品，在全球颇受欢迎
+        比萨饼的通常做法是用发酵的圆面饼上面覆盖番茄酱、奶酪以及其他配料，并由烤炉烤制而成。</a></dd>
+</div>
+<a href="http://www.kfc.com.cn/kfccda/index.aspx" target="_blank">吃披萨到肯德基</a>
+
+
+
+</body>
+</html>
